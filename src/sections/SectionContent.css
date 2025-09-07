@@ -1,0 +1,20 @@
+.content {
+  display: flex;
+  width: 100%;
+  max-width: 1200px; /* limit max width */
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.col {
+  flex: 1; /* makes both columns equal width */
+  padding: 20px;
+}
+
+.col:nth-child(1) {
+  background: #e5e5ff;
+}
+
+.col:nth-child(2) {
+  background: #ffe5e5;
+}

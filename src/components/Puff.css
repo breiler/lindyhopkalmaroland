@@ -1,0 +1,32 @@
+.puff {
+  min-height: 375px;
+  color: "#37493a";
+}
+
+.puff .content {
+  margin-top: 1em;
+}
+
+/* Medium screens (≥768px) */
+@media (min-width: 768px) {
+  .puff {
+    font-size: 1.2em;
+    min-height: 200px;
+  }
+
+  .puff .rotated {
+    margin-top: -0.7em;
+  }
+}
+
+/* Large screens (≥992px) */
+@media (min-width: 992px) {
+  .puff {
+    font-size: 1.3em;
+    min-height: 270px;
+  }
+
+  .puff .rotated {
+    margin-top: -0.4em;
+  }
+}
