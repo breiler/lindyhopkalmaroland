@@ -1,4 +1,3 @@
-import { Col, Container, Row } from "react-bootstrap";
 import "./SectionContent.css";
 
 export const SectionContent = () => {

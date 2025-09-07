@@ -4,7 +4,6 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { Header } from "./Header";
-import { Footer } from "./Footer";
 
 function App() {
   return (
