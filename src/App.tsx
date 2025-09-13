@@ -21,7 +21,7 @@ function App() {
               }
               content={
                 <>
-                  3 September
+                  Spinnrockarna, dansanten
                   <br />
                   17:20 - 18:20
                 </>
@@ -37,7 +37,7 @@ function App() {
               }
               content={
                 <>
-                  15 oktober
+                  Spinnrockarna, dansanten
                   <br />
                   17:20 - 18:20
                 </>
@@ -63,25 +63,25 @@ function App() {
 
               <Carousel style={{ borderRadius: "10px", overflow: "hidden" }}>
                 <Carousel.Item
-                  interval={5000}
+                  interval={6000}
                   style={{
                     height: "292px",
                     backgroundImage: "url(/assets/dance1.jpg)",
                     backgroundPosition: "center center",
                     backgroundRepeat: "no-repeat",
-                    backgroundSize: "100%",
-                    overflow: "hidden",
+                    backgroundSize: "cover",
+                    borderRadius: "10px",
                   }}
                 ></Carousel.Item>
                 <Carousel.Item
-                  interval={3000}
+                  interval={6000}
                   style={{
                     height: "292px",
                     backgroundImage: "url(/assets/dance2.jpg)",
                     backgroundPosition: "center center",
                     backgroundRepeat: "no-repeat",
-                    backgroundSize: "100%",
-                    overflow: "hidden",
+                    backgroundSize: "cover",
+                    borderRadius: "10px",
                   }}
                 ></Carousel.Item>
 
