@@ -87,7 +87,7 @@ function App() {
                     }}
                   ></Carousel.Item>
                   <Carousel.Item
-                    interval={5000}
+                    interval={3000}
                     style={{
                       height: "292px",
                       backgroundImage: "url(/assets/dance2.jpg)",
@@ -97,6 +97,22 @@ function App() {
                       overflow: "hidden",
                     }}
                   ></Carousel.Item>
+
+                  <Carousel.Item interval={20000}>
+                    <video
+                      src="/assets/dance1.mp4"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      style={{
+                        width: "100%",
+                        height: "292px",
+                        objectFit: "cover",
+                        display: "block",
+                      }}
+                    />
+                  </Carousel.Item>
                 </Carousel>
 
                 <div className="social">
