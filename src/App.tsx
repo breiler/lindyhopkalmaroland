@@ -45,93 +45,79 @@ function App() {
             />{" "}
           </Col>
           <Col sm={12} md={7}>
-            <div style={{ position: "relative", paddingBottom: "2em" }}>
-              <div
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  backgroundImage: "url('/assets/contentbox.svg')",
-                  backgroundSize: "100% auto",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "top center",
-                  zIndex: 0,
-                }}
-              />
+            <div
+              style={{
+                position: "relative",
+                backgroundColor: "#f7eac7",
+                borderRadius: "15px",
+                padding: "1.5em",
+                filter: "drop-shadow(10px 10px 0px #77997f)",
+                fontSize: "18px",
+              }}
+            >
+              <p>
+                Vi är ett gäng som håller kurser och socialdanser i Lindy Hop
+                för att skapa mötesplatser, ha kul och utvecklas tillsammans.
+                Kom och dansa med oss!
+              </p>
 
-              <div
-                style={{
-                  position: "relative",
-                  zIndex: 1,
-                  display: "flex",
-                  flexDirection: "column",
-                  padding: "2rem 2.3rem 2rem 1.5rem",
-                  height: "100%",
-                  color: "#412f21",
-                }}
-              >
-                <h3>Lindy Hop Kalmar Öland</h3>
+              <Carousel style={{ borderRadius: "10px", overflow: "hidden" }}>
+                <Carousel.Item
+                  interval={5000}
+                  style={{
+                    height: "292px",
+                    backgroundImage: "url(/assets/dance1.jpg)",
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "100%",
+                    overflow: "hidden",
+                  }}
+                ></Carousel.Item>
+                <Carousel.Item
+                  interval={3000}
+                  style={{
+                    height: "292px",
+                    backgroundImage: "url(/assets/dance2.jpg)",
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "100%",
+                    overflow: "hidden",
+                  }}
+                ></Carousel.Item>
 
-                <Carousel style={{ borderRadius: "12px", overflow: "hidden" }}>
-                  <Carousel.Item
-                    interval={5000}
+                <Carousel.Item interval={20000}>
+                  <video
+                    src="/assets/dance1.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
                     style={{
+                      width: "100%",
                       height: "292px",
-                      backgroundImage: "url(/assets/dance1.jpg)",
-                      backgroundPosition: "center center",
-                      backgroundRepeat: "no-repeat",
-                      backgroundSize: "100%",
-                      overflow: "hidden",
+                      objectFit: "cover",
+                      display: "block",
                     }}
-                  ></Carousel.Item>
-                  <Carousel.Item
-                    interval={3000}
-                    style={{
-                      height: "292px",
-                      backgroundImage: "url(/assets/dance2.jpg)",
-                      backgroundPosition: "center center",
-                      backgroundRepeat: "no-repeat",
-                      backgroundSize: "100%",
-                      overflow: "hidden",
-                    }}
-                  ></Carousel.Item>
+                  />
+                </Carousel.Item>
+              </Carousel>
 
-                  <Carousel.Item interval={20000}>
-                    <video
-                      src="/assets/dance1.mp4"
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      style={{
-                        width: "100%",
-                        height: "292px",
-                        objectFit: "cover",
-                        display: "block",
-                      }}
-                    />
-                  </Carousel.Item>
-                </Carousel>
-
-                <div className="social">
-                  <a
-                    href="https://www.facebook.com/groups/114704406612988"
-                    title="Facebook"
-                  >
-                    <FaFacebook />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/lindyhopkalmaroland/"
-                    title="Instagram"
-                  >
-                    <FaInstagram />
-                  </a>
-                  <a href="mailto:joacim.breiler@gmail.com" title="E-post">
-                    <MdEmail />
-                  </a>
-                </div>
+              <div className="social">
+                <a
+                  href="https://www.facebook.com/groups/114704406612988"
+                  title="Facebook"
+                >
+                  <FaFacebook />
+                </a>
+                <a
+                  href="https://www.instagram.com/lindyhopkalmaroland/"
+                  title="Instagram"
+                >
+                  <FaInstagram />
+                </a>
+                <a href="mailto:joacim.breiler@gmail.com" title="E-post">
+                  <MdEmail />
+                </a>
               </div>
             </div>
           </Col>

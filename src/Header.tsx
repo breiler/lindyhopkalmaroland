@@ -1,13 +1,9 @@
+import "./Header.css";
+
 export const Header = () => {
   return (
-    <header
-      style={{
-        backgroundImage: "url('/assets/top.svg')",
-        backgroundColor: "#ebbf54ff",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        height: "430px",
-      }}
-    />
+    <header className="header">
+      <h1 className="visually-hidden">Lindy Hop Kalmar Öland</h1>
+    </header>
   );
 };
