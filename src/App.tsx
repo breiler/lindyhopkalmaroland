@@ -4,12 +4,10 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { Header } from "./Header";
-import MatomoTracker from "./components/matomotracker/MatomoTracker";
 
 function App() {
   return (
     <div className="d-flex flex-column min-vh-100">
-      <MatomoTracker />
       <Header />
       <Container className="flex-grow-1 my-4">
         <Row>
