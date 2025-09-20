@@ -1,17 +1,12 @@
 import { MatomoProvider, createInstance } from "@datapunt/matomo-tracker-react";
-import { type ReactNode } from "react";
 
-type Props = {
-  children: ReactNode;
-};
-
-const MatomoTracker = ({ children }: Props) => {
+const MatomoTracker = () => {
   const instance = createInstance({
     urlBase: "https://matomo.bitpusher.se/",
     siteId: 4,
   });
 
-  return <MatomoProvider value={instance}>{children}</MatomoProvider>;
+  return <MatomoProvider value={instance} />;
 };
 
 export default MatomoTracker;
