@@ -1,9 +1,9 @@
 import { Carousel, Col, Container, Row } from "react-bootstrap";
-import { PuffOne } from "./components/PuffOne";
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaSpotify } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { Header } from "./Header";
+import Calendar from "./components/Calendar";
 
 function App() {
   return (
@@ -11,38 +11,12 @@ function App() {
       <Header />
       <Container className="flex-grow-1 my-4">
         <Row>
-          <Col md={5} className="d-none d-md-block">
-            <PuffOne
-              title={
-                <>
-                  Nybörjarkurs
-                  <br />3 september 2025
-                </>
-              }
-              content={
-                <>
-                  Spinnrockarna, dansanten
-                  <br />
-                  17:20 - 18:20
-                </>
-              }
-            />
-            <PuffOne
-              title={
-                <>
-                  Fortsättningskurs
-                  <br />
-                  15 oktober 2025
-                </>
-              }
-              content={
-                <>
-                  Spinnrockarna, dansanten
-                  <br />
-                  17:20 - 18:20
-                </>
-              }
-            />{" "}
+          <Col
+            md={5}
+            className="d-none d-md-block"
+            style={{ paddingRight: "2em" }}
+          >
+            <Calendar />
           </Col>
           <Col sm={12} md={7}>
             <div
@@ -118,8 +92,22 @@ function App() {
                 <a href="mailto:joacim.breiler@gmail.com" title="E-post">
                   <MdEmail />
                 </a>
+                <a
+                  href="https://open.spotify.com/playlist/13T0epXo8NrpxJ42Sjg1da?si=XBNkwKToRdqAe0Vx1J4k9w"
+                  title="Spellista på Spotify"
+                >
+                  <FaSpotify />
+                </a>
               </div>
             </div>
+          </Col>
+
+          <Col
+            xs={12}
+            className="d-block d-md-none"
+            style={{ marginTop: "3em" }}
+          >
+            <Calendar />
           </Col>
         </Row>
       </Container>

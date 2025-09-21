@@ -1,6 +1,0 @@
-@import url(./Puff.css);
-
-.puffOne .rotated {
-  margin-top: -0.3em;
-  transform: rotate(-4deg);
-}
