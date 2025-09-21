@@ -4,20 +4,21 @@ import { FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { Header } from "./Header";
 import Calendar from "./components/Calendar";
+import { MD_WIDTH, useWindowWidth } from "./hooks/useWindowWidth";
 
 function App() {
+  const width = useWindowWidth();
+
   return (
     <div className="d-flex flex-column min-vh-100">
       <Header />
       <Container className="flex-grow-1 my-4">
         <Row>
-          <Col
-            md={5}
-            className="d-none d-md-block"
-            style={{ paddingRight: "2em" }}
-          >
-            <Calendar />
-          </Col>
+          {width >= MD_WIDTH && (
+            <Col md={5} style={{ paddingRight: "2em" }}>
+              <Calendar />
+            </Col>
+          )}
           <Col sm={12} md={7}>
             <div
               style={{
@@ -102,13 +103,11 @@ function App() {
             </div>
           </Col>
 
-          <Col
-            xs={12}
-            className="d-block d-md-none"
-            style={{ marginTop: "3em" }}
-          >
-            <Calendar />
-          </Col>
+          {width < MD_WIDTH && (
+            <Col xs={12} style={{ marginTop: "3em" }}>
+              <Calendar />
+            </Col>
+          )}
         </Row>
       </Container>
     </div>
