@@ -1,0 +1,48 @@
+/*.social {
+   margin-top: 0.3em;
+   text-align: right;
+ }
+ 
+ .social a {
+   font-size: 2.5em;
+   color: #37493a;
+   margin-left: 0.3em;
+   margin-right: 0.2em;
+ 
+   display: inline-flex;
+   align-items: center;
+   gap: 0.5rem; 
+ }
+ 
+ .social a:hover {
+   color: #77997f;
+ }*/
+
+.social {
+  display: flex;
+  justify-content: space-around; // distribute evenly across row
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.8em;
+
+  a {
+    display: flex;
+    flex-direction: column; // stack icon above text
+    align-items: center; // center horizontally
+    text-decoration: none;
+    color: inherit; // inherit text color
+
+    svg {
+      font-size: 2.5rem; // adjust icon size
+      margin-bottom: 0.25rem; // spacing between icon and text
+    }
+
+    span {
+      text-align: center;
+    }
+
+    &:hover {
+      color: #77997f; // change to your brand color on hover
+    }
+  }
+}

@@ -15,6 +15,14 @@ type EventProps = {
   event: IcsEvent<NonStandardValuesGeneric>;
 };
 
+const formatLocation = (location: string) => {
+  return location
+    .split(",")
+    .map((part) => part.trim())
+    .slice(0, 1)
+    .join(", ");
+};
+
 const Event = ({ event }: EventProps) => {
   const eventData = {
     "@context": "https://schema.org",
@@ -44,19 +52,22 @@ const Event = ({ event }: EventProps) => {
             moment(event?.end?.date).format("HH:mm")}
         </div>
       </div>
+
       <p className="description">{event.description}</p>
-      <div className="location">
-        <a
-          href={
-            "https://www.google.com/maps/search/?api=1&query=" +
-            encodeURIComponent(event.location!)
-          }
-          target="_blank"
-        >
-          <FaLocationDot size="32" />
-          <span>{event.location}</span>
-        </a>
-      </div>
+      {event.location && (
+        <div className="location">
+          <a
+            href={
+              "https://www.google.com/maps/search/?api=1&query=" +
+              encodeURIComponent(event.location!)
+            }
+            target="_blank"
+          >
+            <FaLocationDot size="24" />
+            <span>{formatLocation(event.location)}</span>
+          </a>
+        </div>
+      )}
 
       {/* Structured Data for SEO */}
       <script
