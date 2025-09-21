@@ -34,8 +34,9 @@ const Event = ({ event }: EventProps) => {
     location: {
       "@type": "Place",
       name: event.location,
-      address: event.location, // if you have structured address, break it down further
+      address: event.location,
     },
+    image: ["https://lindyhopkalmaroland.se/assets/social1.svg"],
   };
 
   return (
