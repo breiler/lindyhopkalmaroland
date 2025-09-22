@@ -9,7 +9,6 @@ import "./App.scss";
 
 const pageDescription =
   "Vi är ett gäng som håller kurser och socialdanser i Lindy Hop för att skapa mötesplatser, ha kul och utvecklas tillsammans.";
-const pageImage = "https://lindyhopkalmaroland.se/assets/social3.png";
 const pageKeywords = "Lindy Hop, Lindyhop, Kalmar, Öland, Kurser";
 
 function App() {
@@ -19,10 +18,6 @@ function App() {
     <div className="d-flex flex-column min-vh-100">
       <meta name="keywords" content={pageKeywords} />
       <meta name="description" content={pageDescription} />
-      <meta property="og:url" content="https://lindyhopkalmaroland.se/" />
-      <meta property="og:title" content="Lindy Hop Kalmar Öland" />
-      <meta property="og:description" content={pageDescription} />
-      <meta property="og:image" content={pageImage} />
       <Header />
       <Container className="flex-grow-1 my-4">
         <Row>
