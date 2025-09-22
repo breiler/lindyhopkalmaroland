@@ -85,20 +85,8 @@ function App() {
                   </Carousel.Item>
                 </Carousel>
               </section>
-            </main>
-            <div
-              style={{
-                position: "relative",
-                backgroundColor: "#d1e7d4",
-                borderRadius: "15px",
-                paddingTop: "1em",
-                paddingBottom: "1em",
-                filter: "drop-shadow(10px 10px 0px #77997f)",
-                fontSize: "18px",
-                marginTop: "2em",
-              }}
-            >
-              <div className="social">
+
+              <section className="social">
                 <a
                   href="https://www.facebook.com/groups/114704406612988"
                   title="Facebook"
@@ -124,8 +112,8 @@ function App() {
                   <FaSpotify />
                   <span>Spotify</span>
                 </a>
-              </div>
-            </div>
+              </section>
+            </main>
           </Col>
 
           {width < MD_WIDTH && (

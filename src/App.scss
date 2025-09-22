@@ -1,24 +1,5 @@
-/*.social {
-   margin-top: 0.3em;
-   text-align: right;
- }
- 
- .social a {
-   font-size: 2.5em;
-   color: #37493a;
-   margin-left: 0.3em;
-   margin-right: 0.2em;
- 
-   display: inline-flex;
-   align-items: center;
-   gap: 0.5rem; 
- }
- 
- .social a:hover {
-   color: #77997f;
- }*/
-
 .social {
+  margin-top: 2rem;
   display: flex;
   justify-content: space-around; // distribute evenly across row
   align-items: flex-start;
