@@ -6,8 +6,9 @@ import {
   type NonStandardValuesGeneric,
 } from "ts-ics";
 import moment from "moment";
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot, FaUpRightFromSquare } from "react-icons/fa6";
 import "./Calendar.scss";
+import { CalendarDate } from "./CalendarDate";
 
 const CALENDAR_URL = "https://bitpusher.se/lko/calendar.ics";
 
@@ -41,40 +42,58 @@ const Event = ({ event }: EventProps) => {
 
   return (
     <div className="event" key={event.uid}>
-      <div className="date">
-        <span className="day">{moment(event.start.date).format("DD")}</span>
-        <span className="month">{moment(event.start.date).format("MMM")}</span>
-      </div>
-      <div className="summary">
-        <h4>{event.summary}</h4>
-        <div className="time">
-          {moment(event.start.date).format("HH:mm") +
-            " - " +
-            moment(event?.end?.date).format("HH:mm")}
-        </div>
-      </div>
+      <time dateTime={moment(event.start.date).format("yyyy-MM-DD HH:mm")}>
+        <CalendarDate date={event.start.date} />
+        <div className="summary">
+          <h4>{event.summary}</h4>
 
-      <p className="description">{event.description}</p>
-      {event.location && (
-        <div className="location">
-          <a
-            href={
-              "https://www.google.com/maps/search/?api=1&query=" +
-              encodeURIComponent(event.location!)
-            }
-            target="_blank"
-          >
-            <FaLocationDot size="24" />
-            <span>{formatLocation(event.location)}</span>
-          </a>
+          <div className="time">
+            {moment(event.start.date).format("HH:mm")} -{" "}
+            {moment(event?.end?.date).format("HH:mm")}
+          </div>
         </div>
-      )}
 
-      {/* Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventData) }}
-      />
+        <p className="description">{event.description}</p>
+        {event.location && (
+          <div className="location">
+            <a
+              href={
+                "https://www.google.com/maps/search/?api=1&query=" +
+                encodeURIComponent(event.location!)
+              }
+              target="_blank"
+            >
+              <span className="icon">
+                <FaLocationDot size="24" />
+              </span>
+              <span>{formatLocation(event.location)}</span>
+            </a>
+          </div>
+        )}
+
+        {event.url && (
+          <div className="url">
+            <a
+              href={
+                "https://www.google.com/maps/search/?api=1&query=" +
+                encodeURIComponent(event.location!)
+              }
+              target="_blank"
+            >
+              <span className="icon">
+                <FaUpRightFromSquare size="18" />
+              </span>
+              <a href={event.url}>Gå till anmälan</a>
+            </a>
+          </div>
+        )}
+
+        {/* Structured Data for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(eventData) }}
+        />
+      </time>
     </div>
   );
 };
@@ -92,8 +111,24 @@ const Calendar = () => {
 
   const todayStart = moment().startOf("day").toDate();
 
+  const course: IcsEvent = {
+    stamp: { date: new Date("2025-10-15 17:20:00") },
+    start: { date: new Date("2025-10-15 17:20:00") },
+    end: { date: new Date("2025-10-15 18:20:00") },
+    summary: "Fortsättningskurs",
+    description:
+      "På den här kursen med 6 tillfällen bygger vi vidare på grundstegen och de grundläggande turerna från nybörjarkursen.",
+    url: "https://dans.se/spinnrockarna/shop/new?event=248424",
+    uid: "248424",
+    location:
+      "Dansklubben Spinnrockarna, Verkstadsgatan, 392 39 Kalmar, Sweden",
+  };
+
   return (
-    <>
+    <aside className="calendar">
+      <Event event={course} />
+
+      <h2>Evenemang</h2>
       {calendar?.events
         ?.filter((e) => new Date(e.start.date) >= todayStart)
         .sort(
@@ -101,11 +136,11 @@ const Calendar = () => {
             new Date(e1.start.date).getTime() -
             new Date(e2.start.date).getTime(),
         )
-        .slice(0, 3)
+        .slice(0, 2)
         .map((event) => (
           <Event event={event} />
         ))}
-    </>
+    </aside>
   );
 };
 

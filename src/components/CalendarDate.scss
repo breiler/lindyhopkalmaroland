@@ -1,0 +1,29 @@
+.date {
+  position: absolute;
+  top: -0.4em;
+  left: -0.4em;
+  width: 60px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.15);
+  transform: rotate(-10deg);
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.2;
+
+  .day {
+    display: block;
+    font-size: 1.5rem;
+    padding: 8px 10px;
+  }
+
+  .month {
+    display: block;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    background: #37493a;
+    color: #d1e7d4;
+    padding: 4px 10px;
+    border-radius: 0 0 8px 8px;
+  }
+}

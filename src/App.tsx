@@ -7,11 +7,22 @@ import Calendar from "./components/Calendar";
 import { MD_WIDTH, useWindowWidth } from "./hooks/useWindowWidth";
 import "./App.scss";
 
+const pageDescription =
+  "Vi är ett gäng som håller kurser och socialdanser i Lindy Hop för att skapa mötesplatser, ha kul och utvecklas tillsammans.";
+const pageImage = "https://lindyhopkalmaroland.se/assets/social3.png";
+const pageKeywords = "Lindy Hop, Lindyhop, Kalmar, Öland, Kurser";
+
 function App() {
   const width = useWindowWidth();
 
   return (
     <div className="d-flex flex-column min-vh-100">
+      <meta name="keywords" content={pageKeywords} />
+      <meta name="description" content={pageDescription} />
+      <meta property="og:url" content="https://lindyhopkalmaroland.se/" />
+      <meta property="og:title" content="Lindy Hop Kalmar Öland" />
+      <meta property="og:description" content={pageDescription} />
+      <meta property="og:image" content={pageImage} />
       <Header />
       <Container className="flex-grow-1 my-4">
         <Row>
@@ -21,7 +32,7 @@ function App() {
             </Col>
           )}
           <Col sm={12} md={7}>
-            <div
+            <main
               style={{
                 position: "relative",
                 backgroundColor: "#f7eac7",
@@ -31,53 +42,55 @@ function App() {
                 fontSize: "18px",
               }}
             >
-              <p>
-                Vi är ett gäng som håller kurser och socialdanser i Lindy Hop
-                för att skapa mötesplatser, ha kul och utvecklas tillsammans.
-              </p>
-              <p> Kom och dansa med oss!</p>
+              <section>
+                <p>
+                  Vi är ett gäng som håller kurser och socialdanser i Lindy Hop
+                  för att skapa mötesplatser, ha kul och utvecklas tillsammans.
+                </p>
+                <p> Kom och dansa med oss!</p>
 
-              <Carousel style={{ borderRadius: "10px", overflow: "hidden" }}>
-                <Carousel.Item
-                  interval={6000}
-                  style={{
-                    height: "292px",
-                    backgroundImage: "url(/assets/dance1.jpg)",
-                    backgroundPosition: "center center",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                    borderRadius: "10px",
-                  }}
-                ></Carousel.Item>
-                <Carousel.Item
-                  interval={6000}
-                  style={{
-                    height: "292px",
-                    backgroundImage: "url(/assets/dance2.jpg)",
-                    backgroundPosition: "center center",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                    borderRadius: "10px",
-                  }}
-                ></Carousel.Item>
-
-                <Carousel.Item interval={20000}>
-                  <video
-                    src="/assets/dance1.mp4"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
+                <Carousel style={{ borderRadius: "10px", overflow: "hidden" }}>
+                  <Carousel.Item
+                    interval={6000}
                     style={{
-                      width: "100%",
                       height: "292px",
-                      objectFit: "cover",
-                      display: "block",
+                      backgroundImage: "url(/assets/dance1.jpg)",
+                      backgroundPosition: "center center",
+                      backgroundRepeat: "no-repeat",
+                      backgroundSize: "cover",
+                      borderRadius: "10px",
                     }}
-                  />
-                </Carousel.Item>
-              </Carousel>
-            </div>
+                  ></Carousel.Item>
+                  <Carousel.Item
+                    interval={6000}
+                    style={{
+                      height: "292px",
+                      backgroundImage: "url(/assets/dance2.jpg)",
+                      backgroundPosition: "center center",
+                      backgroundRepeat: "no-repeat",
+                      backgroundSize: "cover",
+                      borderRadius: "10px",
+                    }}
+                  ></Carousel.Item>
+
+                  <Carousel.Item interval={20000}>
+                    <video
+                      src="/assets/dance1.mp4"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      style={{
+                        width: "100%",
+                        height: "292px",
+                        objectFit: "cover",
+                        display: "block",
+                      }}
+                    />
+                  </Carousel.Item>
+                </Carousel>
+              </section>
+            </main>
             <div
               style={{
                 position: "relative",
