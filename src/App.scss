@@ -27,3 +27,18 @@
     }
   }
 }
+
+.main {
+  position: relative;
+  background-color: #f7eac7;
+  border-radius: 15px;
+  padding: 1.5em;
+  filter: drop-shadow(10px 10px 0px #77997f);
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  .main {
+    margin-top: 3.6rem; /* apply starting at md */
+  }
+}

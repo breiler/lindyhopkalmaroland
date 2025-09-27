@@ -27,16 +27,7 @@ function App() {
             </Col>
           )}
           <Col sm={12} md={7}>
-            <main
-              style={{
-                position: "relative",
-                backgroundColor: "#f7eac7",
-                borderRadius: "15px",
-                padding: "1.5em",
-                filter: "drop-shadow(10px 10px 0px #77997f)",
-                fontSize: "18px",
-              }}
-            >
+            <main className="main">
               <section>
                 <p>
                   Vi är ett gäng som håller kurser och socialdanser i Lindy Hop
