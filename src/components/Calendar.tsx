@@ -111,13 +111,26 @@ const Calendar = () => {
 
   const todayStart = moment().startOf("day").toDate();
 
-  const course: IcsEvent = {
+  const course1: IcsEvent = {
+    stamp: { date: new Date("2025-10-11 10:00:00") },
+    start: { date: new Date("2025-10-11 10:00:00") },
+    end: { date: new Date("2025-10-11 14:30:00") },
+    summary: "Fortsättning med Tomas",
+    description:
+      "Blandad nivå, 1 dags workshop. Vi bygger vidare på materialet från nybörjarkursen. Tomas kommer anpassa innehållet efter deltagarna.",
+    url: "https://dans.se/spinnrockarna/shop/new?event=248437",
+    uid: "248437",
+    location:
+      "Dansklubben Spinnrockarna, Verkstadsgatan, 392 39 Kalmar, Sweden",
+  };
+
+  const course2: IcsEvent = {
     stamp: { date: new Date("2025-10-15 17:20:00") },
     start: { date: new Date("2025-10-15 17:20:00") },
     end: { date: new Date("2025-10-15 18:20:00") },
-    summary: "Fortsättningskurs",
+    summary: "Fortsättning med Joacim och Camilla",
     description:
-      "På den här kursen med 6 tillfällen bygger vi vidare på grundstegen och de grundläggande turerna från nybörjarkursen.",
+      " På den här kursen med 6 tillfällen bygger vi vidare på grundstegen och de grundläggande turerna från nybörjarkursen.",
     url: "https://dans.se/spinnrockarna/shop/new?event=248424",
     uid: "248424",
     location:
@@ -126,7 +139,9 @@ const Calendar = () => {
 
   return (
     <aside className="calendar">
-      <Event event={course} />
+      <h2>Kurser</h2>
+      <Event event={course1} />
+      <Event event={course2} />
 
       <h2>Evenemang</h2>
       {calendar?.events
