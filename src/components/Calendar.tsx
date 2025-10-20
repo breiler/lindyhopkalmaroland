@@ -115,12 +115,28 @@ const Calendar = () => {
     {
       stamp: { date: new Date("2025-10-15 17:20:00") },
       start: { date: new Date("2025-10-15 17:20:00") },
-      end: { date: new Date("2025-10-15 18:20:00") },
+      end: { date: new Date("2025-10-19 18:20:00") },
       summary: "Fortsättning med Joacim och Camilla",
       description:
         " På den här kursen med 6 tillfällen bygger vi vidare på grundstegen och de grundläggande turerna från nybörjarkursen.",
       url: "https://dans.se/spinnrockarna/shop/new?event=248424",
       uid: "248424",
+      location:
+        "Dansklubben Spinnrockarna, Verkstadsgatan, 392 39 Kalmar, Sweden",
+      recurrenceRule: {
+        frequency: "WEEKLY",
+        count: 6,
+      },
+    },
+    {
+      stamp: { date: new Date("2025-11-23 10:00:00") },
+      start: { date: new Date("2025-11-23 10:00:00") },
+      end: { date: new Date("2025-11-23 14:30:00") },
+      summary: "Fördjupning med Tomas Nilsson",
+      description:
+        "Huvudtemat för fördjupningen är att prata mer om tekniken (hur dansar man Lindy Hop) samt få till några av de lite svårare figurerna.",
+      url: "https://dans.se/spinnrockarna/shop/new?event=248438",
+      uid: "248438",
       location:
         "Dansklubben Spinnrockarna, Verkstadsgatan, 392 39 Kalmar, Sweden",
     },
