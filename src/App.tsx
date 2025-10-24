@@ -97,7 +97,7 @@ function App() {
                   <span>E-post</span>
                 </a>
                 <a
-                  href="https://open.spotify.com/playlist/13T0epXo8NrpxJ42Sjg1da?si=XBNkwKToRdqAe0Vx1J4k9w"
+                  href="https://open.spotify.com/playlist/6jWWl3E4OkQBIDTD5extAB?si=sYZSwW9MQUmVaYunTUzeNw"
                   title="Spellista på Spotify"
                 >
                   <FaSpotify />
