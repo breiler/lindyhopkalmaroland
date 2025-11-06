@@ -9,7 +9,7 @@ import "./App.scss";
 
 const pageDescription =
   "Vi är ett gäng som håller kurser och socialdanser i Lindy Hop för att skapa mötesplatser, ha kul och utvecklas tillsammans.";
-const pageKeywords = "Lindy Hop, Lindyhop, Kalmar, Öland, Kurser";
+const pageKeywords = "Lindy Hop, Lindyhop, Kalmar, Öland, Kurs, Dans";
 
 function App() {
   const width = useWindowWidth();
