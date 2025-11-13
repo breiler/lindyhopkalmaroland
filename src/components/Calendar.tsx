@@ -53,7 +53,12 @@ const Event = ({ event }: EventProps) => {
           </div>
         </div>
 
-        <p className="description">{event.description}</p>
+        <p
+          className="description"
+          dangerouslySetInnerHTML={{
+            __html: event.description?.replaceAll("\n", "<br/>") ?? "",
+          }}
+        />
         {event.location && (
           <div className="location">
             <a
@@ -113,22 +118,6 @@ const Calendar = () => {
 
   const courses: IcsEvent[] = [
     {
-      stamp: { date: new Date("2025-10-15 17:20:00") },
-      start: { date: new Date("2025-10-15 17:20:00") },
-      end: { date: new Date("2025-10-19 18:20:00") },
-      summary: "Fortsättning med Joacim och Camilla",
-      description:
-        " På den här kursen med 6 tillfällen bygger vi vidare på grundstegen och de grundläggande turerna från nybörjarkursen.",
-      url: "https://dans.se/spinnrockarna/shop/new?event=248424",
-      uid: "248424",
-      location:
-        "Dansklubben Spinnrockarna, Verkstadsgatan, 392 39 Kalmar, Sweden",
-      recurrenceRule: {
-        frequency: "WEEKLY",
-        count: 6,
-      },
-    },
-    {
       stamp: { date: new Date("2025-11-23 10:00:00") },
       start: { date: new Date("2025-11-23 10:00:00") },
       end: { date: new Date("2025-11-23 14:30:00") },
@@ -139,6 +128,34 @@ const Calendar = () => {
       uid: "248438",
       location:
         "Dansklubben Spinnrockarna, Verkstadsgatan, 392 39 Kalmar, Sweden",
+    },
+    {
+      stamp: { date: new Date("2026-03-04 17:30:00") },
+      start: { date: new Date("2026-03-04 17:30:00") },
+      end: { date: new Date("2025-10-19 18:30:00") },
+      summary: "Nybörjarkurs med Joacim och Camilla",
+      description:
+        "Nybörjarkurs med 8 tillfällen i Lindy Hop där vi går igenom dansens grundsteg, förar- och följarteknik samt de vanligaste turerna.\n\nAnmälan öppnar snart.",
+      uid: "266018",
+      location: "Kulturhuset Strömmen, Tullslätten 4, 392 53 Kalmar, Sweden",
+      recurrenceRule: {
+        frequency: "WEEKLY",
+        count: 8,
+      },
+    },
+    {
+      stamp: { date: new Date("2026-03-04 18:45:00") },
+      start: { date: new Date("2026-03-04 18:45:00") },
+      end: { date: new Date("2025-10-19 19:45:00") },
+      summary: "Fortsättningskurs med Joacim och Camilla",
+      description:
+        "På den här kursen med 8 tillfällen bygger vi vidare på grundstegen och de grundläggande turerna från nybörjarkursen.\n\nAnmälan öppnar snart.",
+      uid: "265578",
+      location: "Kulturhuset Strömmen, Tullslätten 4, 392 53 Kalmar, Sweden",
+      recurrenceRule: {
+        frequency: "WEEKLY",
+        count: 8,
+      },
     },
   ];
 
