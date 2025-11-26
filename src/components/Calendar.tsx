@@ -118,18 +118,6 @@ const Calendar = () => {
 
   const courses: IcsEvent[] = [
     {
-      stamp: { date: new Date("2025-11-23 10:00:00") },
-      start: { date: new Date("2025-11-23 10:00:00") },
-      end: { date: new Date("2025-11-23 14:30:00") },
-      summary: "Fördjupning med Tomas Nilsson",
-      description:
-        "Huvudtemat för fördjupningen är att prata mer om tekniken (hur dansar man Lindy Hop) samt få till några av de lite svårare figurerna.",
-      url: "https://dans.se/spinnrockarna/shop/new?event=248438",
-      uid: "248438",
-      location:
-        "Dansklubben Spinnrockarna, Verkstadsgatan, 392 39 Kalmar, Sweden",
-    },
-    {
       stamp: { date: new Date("2026-03-04 17:30:00") },
       start: { date: new Date("2026-03-04 17:30:00") },
       end: { date: new Date("2025-10-19 18:30:00") },
