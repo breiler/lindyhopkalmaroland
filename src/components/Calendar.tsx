@@ -20,7 +20,7 @@ const formatLocation = (location: string) => {
   return location
     .split(",")
     .map((part) => part.trim())
-    .slice(0, 1)
+    .slice(0, 2)
     .join(", ");
 };
 
@@ -123,10 +123,11 @@ const Calendar = () => {
       end: { date: new Date("2025-10-19 18:30:00") },
       summary: "Nybörjarkurs med Joacim och Camilla",
       description:
-        "Nybörjarkurs med 8 tillfällen i Lindy Hop där vi går igenom dansens grundsteg, förar- och följarteknik samt de vanligaste turerna.",
+        "Nybörjarkurs med 8 tillfällen i Lindy Hop där vi går igenom dansens grundsteg, föra- och följateknik samt de vanligaste turerna.",
       uid: "266018",
       url: "https://dans.se/lindyhopkalmaroland/shop/?event=266018&info=1",
-      location: "Kulturhuset Strömmen, Tullslätten 4, 392 53 Kalmar, Sweden",
+      location:
+        "Black Box, Kulturhuset Strömmen, Tullslätten 4, 392 53 Kalmar, Sweden",
       recurrenceRule: {
         frequency: "WEEKLY",
         count: 8,
@@ -141,7 +142,8 @@ const Calendar = () => {
         "På den här kursen med 8 tillfällen bygger vi vidare på grundstegen och de grundläggande turerna från nybörjarkursen.",
       uid: "265578",
       url: "https://dans.se/lindyhopkalmaroland/shop/?event=265578&info=1",
-      location: "Kulturhuset Strömmen, Tullslätten 4, 392 53 Kalmar, Sweden",
+      location:
+        "Black Box, Kulturhuset Strömmen, Tullslätten 4, 392 53 Kalmar, Sweden",
       recurrenceRule: {
         frequency: "WEEKLY",
         count: 8,
