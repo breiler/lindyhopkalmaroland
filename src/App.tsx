@@ -8,7 +8,7 @@ import { MD_WIDTH, useWindowWidth } from "./hooks/useWindowWidth";
 import "./App.scss";
 
 const pageDescription =
-  "Vi är ett gäng som håller kurser och socialdanser i Lindy Hop för att skapa mötesplatser, ha kul och utvecklas tillsammans.";
+  "Vi erbjuder danskurser och socialdanser i Lindy Hop - en afroamerikansk swingdans med rötterna i 30-talets Harlem, New York. Kom och dansa med oss!";
 const pageKeywords = "Lindy Hop, Lindyhop, Kalmar, Öland, Kurs, Dans";
 
 function App() {
@@ -30,8 +30,9 @@ function App() {
             <main className="main">
               <section>
                 <p>
-                  Vi är ett gäng som håller kurser och socialdanser i Lindy Hop
-                  för att skapa mötesplatser, ha kul och utvecklas tillsammans.
+                  Vi erbjuder danskurser och socialdanser i Lindy Hop - en
+                  energifylld afroamerikansk swingdans med rötterna i 30-talets
+                  Harlem, New York.
                 </p>
                 <p> Kom och dansa med oss!</p>
 
