@@ -37,6 +37,36 @@ function App() {
                 <p> Kom och dansa med oss!</p>
 
                 <Carousel style={{ borderRadius: "10px", overflow: "hidden" }}>
+                  <Carousel.Item interval={10000}>
+                    <video
+                      src="/assets/dance1.mp4"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      style={{
+                        width: "100%",
+                        height: "292px",
+                        objectFit: "cover",
+                        display: "block",
+                      }}
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={10000}>
+                    <video
+                      src="/assets/dance2.mp4"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      style={{
+                        width: "100%",
+                        height: "292px",
+                        objectFit: "cover",
+                        display: "block",
+                      }}
+                    />
+                  </Carousel.Item>
                   <Carousel.Item
                     interval={6000}
                     style={{
@@ -59,22 +89,6 @@ function App() {
                       borderRadius: "10px",
                     }}
                   ></Carousel.Item>
-
-                  <Carousel.Item interval={20000}>
-                    <video
-                      src="/assets/dance1.mp4"
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      style={{
-                        width: "100%",
-                        height: "292px",
-                        objectFit: "cover",
-                        display: "block",
-                      }}
-                    />
-                  </Carousel.Item>
                 </Carousel>
               </section>
 
