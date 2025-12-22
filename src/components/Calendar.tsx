@@ -162,20 +162,19 @@ const Calendar = () => {
 
   return (
     <aside className="calendar">
-      {courses.length > 0 && (
-        <>
-          <h2>Kurser</h2>
-          {courses.map((course) => (
-            <Event key={course.uid} event={course} />
-          ))}
-        </>
-      )}
-
       {events.length > 0 && (
         <>
           <h2>Evenemang</h2>
           {events.map((event) => (
             <Event event={event} />
+          ))}
+        </>
+      )}
+      {courses.length > 0 && (
+        <>
+          <h2>Kurser</h2>
+          {courses.map((course) => (
+            <Event key={course.uid} event={course} />
           ))}
         </>
       )}
