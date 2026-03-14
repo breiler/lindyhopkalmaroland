@@ -117,7 +117,7 @@ const Calendar = () => {
   const todayStart = moment().startOf("day").toDate();
 
   const courses: IcsEvent[] = [
-    {
+    /*{
       stamp: { date: new Date("2026-03-04 17:30:00") },
       start: { date: new Date("2026-03-04 17:30:00") },
       end: { date: new Date("2025-10-19 18:30:00") },
@@ -148,7 +148,7 @@ const Calendar = () => {
         frequency: "WEEKLY",
         count: 8,
       },
-    },
+    },*/
   ];
 
   const events: IcsEvent[] =
