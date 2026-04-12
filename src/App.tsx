@@ -19,7 +19,7 @@ function App() {
       <meta name="keywords" content={pageKeywords} />
       <meta name="description" content={pageDescription} />
       <Header />
-      <Container className="flex-grow-1 my-4">
+      <Container className="flex-grow-1 content">
         <Row>
           {width >= MD_WIDTH && (
             <Col md={5} style={{ paddingRight: "2em" }}>
@@ -31,7 +31,7 @@ function App() {
               <section>
                 <p>
                   Vi erbjuder danskurser och socialdanser i Lindy Hop - en
-                  energifylld afroamerikansk swingdans med rötterna i 30-talets
+                  lekfull afroamerikansk swingdans med rötterna i 30-talets
                   Harlem, New York.
                 </p>
                 <p> Kom och dansa med oss!</p>
@@ -39,7 +39,7 @@ function App() {
                 <Carousel style={{ borderRadius: "10px", overflow: "hidden" }}>
                   <Carousel.Item interval={10000}>
                     <video
-                      src="/assets/dance1.mp4"
+                      src="/assets/dance2.mp4"
                       autoPlay
                       muted
                       loop
@@ -54,7 +54,7 @@ function App() {
                   </Carousel.Item>
                   <Carousel.Item interval={10000}>
                     <video
-                      src="/assets/dance2.mp4"
+                      src="/assets/dance1.mp4"
                       autoPlay
                       muted
                       loop

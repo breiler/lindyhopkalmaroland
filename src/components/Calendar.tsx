@@ -117,41 +117,41 @@ const Calendar = () => {
   const todayStart = moment().startOf("day").toDate();
 
   const courses: IcsEvent[] = [
-    /*{
-      stamp: { date: new Date("2026-03-04 17:30:00") },
-      start: { date: new Date("2026-03-04 17:30:00") },
-      end: { date: new Date("2025-10-19 18:30:00") },
+    {
+      stamp: { date: new Date("2026-09-30 17:30:00") },
+      start: { date: new Date("2026-09-30 17:30:00") },
+      end: { date: new Date("2025-11-25 18:30:00") },
       summary: "Nybörjarkurs med Joacim och Camilla",
       description:
-        "Nybörjarkurs med 8 tillfällen i Lindy Hop där vi går igenom dansens grundsteg, föra- och följateknik samt de vanligaste turerna.",
-      uid: "266018",
-      url: "https://dans.se/lindyhopkalmaroland/shop/?event=266018&info=1",
+        "Kursstart av nybörjarkurs med 8 tillfällen i Lindy Hop där vi går igenom dansens grundsteg, föra- och följateknik samt de vanligaste turerna.",
+      uid: "279608",
+      url: "https://dans.se/lindyhopkalmaroland/shop/new?event=279608&info=1",
       location:
-        "Black Box, Kulturhuset Strömmen, Tullslätten 4, 392 53 Kalmar, Sweden",
+        "Systraholmen, Kulturhuset Strömmen, Tullslätten 4, 392 53 Kalmar, Sweden",
       recurrenceRule: {
         frequency: "WEEKLY",
         count: 8,
       },
     },
     {
-      stamp: { date: new Date("2026-03-04 18:45:00") },
-      start: { date: new Date("2026-03-04 18:45:00") },
-      end: { date: new Date("2025-10-19 19:45:00") },
+      stamp: { date: new Date("2026-09-30 18:45:00") },
+      start: { date: new Date("2026-09-30 18:45:00") },
+      end: { date: new Date("2025-11-25 19:45:00") },
       summary: "Fortsättningskurs med Joacim och Camilla",
       description:
-        "På den här kursen med 8 tillfällen bygger vi vidare på grundstegen och de grundläggande turerna från nybörjarkursen.",
-      uid: "265578",
-      url: "https://dans.se/lindyhopkalmaroland/shop/?event=265578&info=1",
+        "Kursstart av fortsättningskurs med 8 tillfällen bygger vi vidare på grundstegen och de grundläggande turerna från nybörjarkursen.",
+      uid: "279609",
+      url: "https://dans.se/lindyhopkalmaroland/shop/new?event=279609&info=1",
       location:
-        "Black Box, Kulturhuset Strömmen, Tullslätten 4, 392 53 Kalmar, Sweden",
+        "Systraholmen, Kulturhuset Strömmen, Tullslätten 4, 392 53 Kalmar, Sweden",
       recurrenceRule: {
         frequency: "WEEKLY",
         count: 8,
       },
-    },*/
+    },
   ];
 
-  const events: IcsEvent[] =
+  let events: IcsEvent[] =
     calendar?.events
       ?.filter((e) => new Date(e.start.date) >= todayStart)
       .sort(
@@ -160,21 +160,18 @@ const Calendar = () => {
       )
       .slice(0, 2) ?? [];
 
+  events = [...events, ...courses].sort(
+    (e1, e2) =>
+      new Date(e1.start.date).getTime() - new Date(e2.start.date).getTime(),
+  );
+
   return (
     <aside className="calendar">
       {events.length > 0 && (
         <>
-          <h2>Evenemang</h2>
+          <h2>Aktiviteter</h2>
           {events.map((event) => (
             <Event event={event} />
-          ))}
-        </>
-      )}
-      {courses.length > 0 && (
-        <>
-          <h2>Kurser</h2>
-          {courses.map((course) => (
-            <Event key={course.uid} event={course} />
           ))}
         </>
       )}
