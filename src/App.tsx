@@ -89,7 +89,7 @@ function App() {
                 <p>
                   Vi är en idéell kulturförening vars mål är att berika
                   människors liv genom att främja intresset för Lindy Hop - en
-                  lekfull afromaerikans swingdans med rötterna i 30-talets
+                  lekfull afroamerikansk swingdans med rötterna i 30-talets
                   Harlem, New York. Det gör vi genom att anordna kurser och
                   socialdanser i Kalmar och på Öland.
                 </p>
