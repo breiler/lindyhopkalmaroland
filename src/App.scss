@@ -35,6 +35,15 @@
   padding: 1.5em;
   filter: drop-shadow(10px 10px 0px #77997f);
   font-size: 18px;
+
+  a {
+    color: rgb(55, 73, 58);
+    text-decoration: underline;
+  }
+
+  h2 {
+    margin-top: 1.2em;
+  }
 }
 
 @media (min-width: 768px) {
