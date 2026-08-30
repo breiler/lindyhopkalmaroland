@@ -10,8 +10,8 @@ import { FaLocationDot, FaUpRightFromSquare } from "react-icons/fa6";
 import "./Calendar.scss";
 import { CalendarDate } from "./CalendarDate";
 
-//const CALENDAR_URL = "https://bitpusher.se/lko/calendar.ics";
-const CALENDAR_URL = "/basic.ics";
+const CALENDAR_URL = "https://bitpusher.se/lko/calendar.ics";
+//const CALENDAR_URL = "/basic.ics";
 
 type EventProps = {
   event: IcsEvent<NonStandardValuesGeneric>;
