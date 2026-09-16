@@ -144,7 +144,7 @@ const Calendar = () => {
         count: 8,
       },
     },
-    {
+    /*{
       stamp: { date: new Date("2026-09-13 11:00:00") },
       start: { date: new Date("2026-09-13 11:00:00") },
       end: { date: new Date("2025-09-13 16:00:00") },
@@ -155,7 +155,7 @@ const Calendar = () => {
       url: "https://dans.se/spinnrockarna/shop/new?event=281635",
       location:
         "Dansklubben Spinnrockarna, Verkstadsgatan 6B, 392 39 KALMAR, Sweden",
-    },
+    },*/
   ];
 
   let events: IcsEvent[] =
