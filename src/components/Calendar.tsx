@@ -10,8 +10,8 @@ import { FaLocationDot, FaUpRightFromSquare } from "react-icons/fa6";
 import "./Calendar.scss";
 import { CalendarDate } from "./CalendarDate";
 
-//const CALENDAR_URL = "https://bitpusher.se/lko/calendar.ics";
-const CALENDAR_URL = "/basic.ics";
+const CALENDAR_URL = "https://bitpusher.se/lko/calendar.ics";
+//const CALENDAR_URL = "/basic.ics";
 
 type EventProps = {
   event: IcsEvent<NonStandardValuesGeneric>;
@@ -112,7 +112,7 @@ const Calendar = () => {
   const todayStart = moment().startOf("day").toDate();
 
   const courses: IcsEvent[] = [
-    {
+    /*{
       stamp: { date: new Date("2026-09-30 17:30:00") },
       start: { date: new Date("2026-09-30 17:30:00") },
       end: { date: new Date("2025-11-25 18:30:00") },
@@ -143,7 +143,7 @@ const Calendar = () => {
         frequency: "WEEKLY",
         count: 8,
       },
-    },
+    },*/
     /*{
       stamp: { date: new Date("2026-09-13 11:00:00") },
       start: { date: new Date("2026-09-13 11:00:00") },
