@@ -165,7 +165,7 @@ const Calendar = () => {
         (e1, e2) =>
           new Date(e1.start.date).getTime() - new Date(e2.start.date).getTime(),
       )
-      .slice(0, 2) ?? [];
+      .slice(0, courses.length > 0 ? 2 : 4) ?? [];
 
   events = [...events, ...courses].sort(
     (e1, e2) =>
